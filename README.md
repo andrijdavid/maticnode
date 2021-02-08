@@ -1,6 +1,7 @@
 # Matic Node with Docker
 
-This launch a matic node by providing container with ssh exposed for ansible. This is not stable rightnow. Feel free to send a pull request.
+This launch a matic node by providing container with ssh exposed for ansible. This is just meant for testing **environment**. 
+Feel free to send a pull request.
 
 
 Make sure you have docker and docker-compose installed.
