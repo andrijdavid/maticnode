@@ -1,0 +1,29 @@
+version: "3.1"
+
+services:
+
+  validator: 
+    image: quay.io/andrijdavid/ubuntu-sshd:focal
+    container_name: matic_validator
+    restart: always
+    volumes:
+      - validator_home:/root/
+
+  sentry:
+    image: quay.io/andrijdavid/ubuntu-sshd:focal
+    container_name: matic_sentry
+    restart: always
+    volumes:
+      - sentry_home:/root/
+
+volumes:
+  
+  validator_home:
+    driver: local-persist
+    driver_opts:
+      mountpoint: ${PWD}/data/validator
+  
+  sentry_home:
+    driver: local-persist
+    driver_opts:
+      mountpoint: ${PWD}/data/sentry
